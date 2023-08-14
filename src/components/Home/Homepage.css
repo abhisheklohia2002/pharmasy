@@ -1,0 +1,61 @@
+
+.HomePage_main_Box{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.Homepage_main_box_second{
+    display: flex;
+    width: 40rem;
+    justify-content: space-around;
+}
+.divider_main_box{
+    padding-left: 3rem;
+    margin-top: 1rem;
+}
+.HomePage_main_looking{
+width: 40%;
+text-align: right;
+padding-top: 2rem;
+}
+.searchBOx{
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+}
+.CartBox_box{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+.Image_box{
+    margin-right: 1rem;
+}
+.gradients{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(249, 249, 249) 100%);
+}
+.welcome_offer{
+    margin-top: 5rem;
+    padding-left: 5rem;
+}
+
+
+.scrollbar {
+    display: flex;
+    width: 80rem;
+    margin: auto;
+    margin-left: 8rem;
+    margin-top: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide default scrollbar for Firefox */
+  }
+  
+  .scrollbar::-webkit-scrollbar {
+    display: none; /* Hide default scrollbar for WebKit browsers */
+  }
+  
+  .scrollbar > Box {
+    flex: 0 0 auto;
+  }
+  

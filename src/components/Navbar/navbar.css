@@ -1,0 +1,29 @@
+.main_box_navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.box_navbar{
+    display: flex;
+    justify-content: space-around;
+}
+.image_box{
+    padding-left: 2rem;
+    margin-right: 2rem;
+}
+
+.after_box_{
+    padding-left: 2rem;
+}
+
+.Main_box_second{
+    padding-left: 40rem;
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+}
+
+.divider_padding{
+    padding-left: 3rem;
+    
+}

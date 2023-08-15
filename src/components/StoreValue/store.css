@@ -1,0 +1,61 @@
+.valueStore_heading{
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 500;
+/* border: 2px solid black; */
+text-align: left;
+width: 60%;
+margin: auto;
+margin-top: 2rem;
+}
+
+.ValueStore_filter{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.Selection{
+    /* width: 90%; */
+}
+
+.sort_box{
+    display: flex;
+place-items: center;
+justify-content: space-around;
+}
+
+.CartProducts_Box{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+.Price_cart{
+    display: flex;
+    margin-top: 1rem;
+padding-bottom: 2rem;
+    justify-content: space-around;
+}
+.cartProducts_box{
+    margin-top: 1rem;
+}
+.image_box{
+    padding-top: 1rem;
+}
+.main_cart_products{
+    
+   
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.grid_simple{
+    padding-top: 2.2rem;
+}
+
+.main_cart_products:hover{
+    cursor: pointer;
+    border: 2px solid rgb(135, 128, 128);
+}

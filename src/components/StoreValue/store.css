@@ -59,3 +59,61 @@ padding-bottom: 2rem;
     cursor: pointer;
     border: 2px solid rgb(135, 128, 128);
 }
+
+
+.Box_Eachitems{
+    
+}
+
+.Box_grid_second{
+    text-align: left;
+}
+
+.Text_title_grid{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: rgb(134, 121, 105);
+}
+
+.Text_price_grid{
+    padding-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: rgb(134, 121, 105);
+
+}
+
+.star_grid{
+    padding-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: rgb(134, 121, 105);
+    
+}
+.del_grid{
+    font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+    color: rgb(134, 121, 105);  
+}
+
+.selected_grid{
+   
+    width: 50%;
+    /* border: 2px solid black; */
+  
+    margin-left: 18rem;
+}
+
+
+
+
+.Cart_grid_Products{
+    text-align: center;
+    place-items: center;
+    margin-bottom: 1.5rem;
+   
+}
+
+.Cart_products_price_image{
+    text-align: center;
+}

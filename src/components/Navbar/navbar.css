@@ -11,6 +11,9 @@
     padding-left: 2rem;
     margin-right: 2rem;
 }
+.image_box:hover{
+    cursor: pointer;
+}
 
 .after_box_{
     padding-left: 2rem;

@@ -4,6 +4,10 @@
     justify-content: center;
     padding-top: 1rem;
 }
+.HomePage_main_Box:hover{
+    cursor: pointer;
+   
+}
 .Homepage_main_box_second{
     display: flex;
     width: 40rem;
@@ -59,3 +63,12 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(249, 249, 249) 10
     flex: 0 0 auto;
   }
   
+
+  .Offer_Homepage{
+    margin-top: 3rem;
+    padding-left: 5rem;
+  }
+
+  .Offer_OfferBox{
+    display: flex;
+  }

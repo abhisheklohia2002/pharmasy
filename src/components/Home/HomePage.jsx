@@ -4,6 +4,7 @@ import SearchBox from '../Search/SearchBox'
 import CartBox from '../Box/CartBox'
 import "./HomePage.css"
 import { useNavigate } from 'react-router-dom'
+import OfferBox from '../Box/OfferBox'
 
 
 
@@ -85,7 +86,7 @@ fontWeight={600}    >
         <Image
           w={"50rem"}
           h={"15rem"}
-          src={"https://cdn01.pharmeasy.in/dam/banner/banner/cdd68240872-MainSaleBannerHP.jpg"}
+          src={"https://cdn01.pharmeasy.in/dam/banner/banner/6177763516b-Zandu.jpg"}
           alt="Image 2"
         />
       </Box>
@@ -93,7 +94,7 @@ fontWeight={600}    >
         <Image
           w={"50rem"}
           h={"15rem"}
-          src={"https://cdn01.pharmeasy.in/dam/banner/banner/cdd68240872-MainSaleBannerHP.jpg"}
+          src={"https://cdn01.pharmeasy.in/dam/banner/banner/24af877e303-Group_514021.jpg"}
           alt="Image 3"
         />
       </Box>
@@ -101,12 +102,28 @@ fontWeight={600}    >
         <Image
           w={"50rem"}
           h={"15rem"}
-          src={"https://cdn01.pharmeasy.in/dam/banner/banner/cdd68240872-MainSaleBannerHP.jpg"}
+          src={"	https://cdn01.pharmeasy.in/dam/banner/banner/842f280d566-WELL25.jpg"}
           alt="Image 4"
         />
       </Box>
     </Box>
+<Box
+className='Offer_Homepage'
+>
+<Text
+fontSize="3xl" fontFamily="heading"
+fontWeight={600} 
+>
+Offers Just for You
+</Text>
+<Box className='Offer_OfferBox'>
+<OfferBox image = {"https://cms-contents.pharmeasy.in/offer/05aeec7a153-pelogo.png?dim=1440x0"} off = {"Get Flat 25% OFF on first 2 medicine order"} title = {"medicine order"}  />
+<OfferBox image = {"https://cms-contents.pharmeasy.in/offer/ca6fdf0f40e-600.jpg?dim=1440x0"} off = {"Order medicines worth Rs.999 "} title = {"& get FLAT Rs.600 OFF on your first lab test"}  />
+<OfferBox image = {"	https://cms-contents.pharmeasy.in/offer/841931c5555-icici-new.jpg?dim=1440x0"} off = {"Flat Rs.100 off on transaction above "} title = {"Rs.1500"}  />
 
+<OfferBox image = {"https://cms-contents.pharmeasy.in/offer/976c75e8d9f-600.jpg?dim=1440x0"} off = {"Get FLAT Rs.600 OFF on Lab Test bookings  above "} title = {"Rs 1999."}  />
+</Box>
+</Box>
 
     </>
   )

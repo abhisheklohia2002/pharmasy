@@ -131,7 +131,9 @@ FetchProducts()
   {
     products?.map((elem,index)=>(
 
-              <CartProducts  key = {elem.id} price = {elem.price} title = {elem.title} images = {elem.image} off = {Math.floor(elem.price%20)*10}  />
+      <span key={index}>
+                <CartProducts  id = {index} price = {elem.price} title = {elem.title} images = {elem.image} off = {Math.floor(elem.price%20)*10}  />
+      </span>
       
     ))
   }

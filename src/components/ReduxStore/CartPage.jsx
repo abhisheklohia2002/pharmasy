@@ -12,6 +12,7 @@ GetData:(state,action)=>{
 
 },
 RemoveData:(state,action)=>{
+    console.log(action.payload)
     return {
         ...state,
         cart: state.cart.filter((e) => e.id !== action.payload.id)

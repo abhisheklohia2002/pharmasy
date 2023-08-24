@@ -2,3 +2,48 @@
   margin: 0;
   padding: 0;
 }
+
+.Drawer_Box_login{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding-top: 2rem;
+  color: whitesmoke;
+}
+.Header_drawer{
+  background: linear-gradient(105.75deg,#2ecca8,#238478 99.67%);
+  /* height: 15rem; */
+}
+.Drawerfooter_login{
+  font-size: 1rem;
+}
+
+.DrawerBody_login{
+ padding-top: 2rem;
+}
+.text_login_drawer{
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: rgb(82, 79, 75);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text_otp_drawer{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(82, 79, 75);
+}
+.inp_otp{
+  margin-right: 1rem;
+}
+.drawer_input_login{
+  
+}
+.btn_drawer_login{
+margin-top: 1rem;
+
+
+}

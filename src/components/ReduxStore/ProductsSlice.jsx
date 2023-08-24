@@ -7,6 +7,7 @@ const ProductsSlice = createSlice({
     },
     reducers:{
         AddToCart:(state,action)=>{
+            
             return { ...state, cart: [...state.cart, { ...action.payload }] };
         },
         RemoveToCart:(state,action)=>{

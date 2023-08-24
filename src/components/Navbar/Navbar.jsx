@@ -4,9 +4,12 @@ import { Box, Flex, Text, Spacer, Link, Button ,Container,Image, Divider} from '
 import {AiOutlineUser} from "react-icons/ai"
 import {BiSolidOffer} from "react-icons/bi"
 import {BsCart} from "react-icons/bs"
-export default function Navbar({btnRef,HandleClickCart}) {
-
-
+import { useNavigate } from 'react-router-dom';
+export default function Navbar({btnRef,HandleClickCart,LoginDrawer,isLoginOpen}) {
+const nav = useNavigate()
+const HomeToLink = ()=>{
+nav("/")
+}
   return (
     <>
     <Box className='main_box_navbar'
@@ -15,6 +18,7 @@ export default function Navbar({btnRef,HandleClickCart}) {
     <Box className='box_navbar'>
       <Box className='image_box' >
         <Image
+        onClick={HomeToLink}
           src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
           alt="PharmEasy Logo"
         />
@@ -40,10 +44,12 @@ export default function Navbar({btnRef,HandleClickCart}) {
     
       <Box>
         <Flex align="center">
-          <Box pl={3}>
+          <Box ref={LoginDrawer} onClick={isLoginOpen} pl={3}>
             <AiOutlineUser size={22} />
           </Box>
-          <Text>Hello,Log In</Text>
+          <Text ref={LoginDrawer} 
+          onClick={isLoginOpen}
+          >Hello,Log In</Text>
         </Flex>
       </Box>
       {/* BsCart */}
@@ -60,7 +66,7 @@ export default function Navbar({btnRef,HandleClickCart}) {
           <Box pl={3}>
             <BsCart size={22} />
           </Box>
-          <Button ref={btnRef} onClick={HandleClickCart} >Cart</Button>
+          <Button  >Cart</Button>
         </Flex>
       </Box>
     </Box>

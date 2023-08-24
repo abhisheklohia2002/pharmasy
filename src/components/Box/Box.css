@@ -4,3 +4,17 @@
 .cartbox{
     border-radius: 1rem;
 }
+
+.Offer_Box_you{
+    display: flex;
+    place-items: center;
+    
+    margin-right: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+}
+.Box_image_offer{
+    
+}

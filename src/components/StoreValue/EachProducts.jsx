@@ -78,7 +78,7 @@ dispatch(AddToCart(payload))
         Please add item(s) to proceed
         </Text>
 <Text onClick={()=>AddToCarts(id,price*(Number(selectedOption)),title,images,selectedOption)} paddingTop={"1rem"}>
-<ADDTOCART title = {"View Cart"} width = "30rem" color="whatsapp"   />
+<ADDTOCART title = {"Add To Cart"} width = "30rem" color="whatsapp"   />
 </Text>
       </Box>
     </Grid>

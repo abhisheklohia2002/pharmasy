@@ -13,11 +13,14 @@ const ProductsSlice = createSlice({
         RemoveToCart:(state,action)=>{
             return {
                 ...state,
-                cart: state.cart.filter((e) => e.id !== action.payload.id)
+                cart: state.cart.filter((e) => e.id !== action.payload.id),
+
               };
         },
         Subtotal:(state,action)=>{
-
+return {
+    
+}
         }
     }
 })

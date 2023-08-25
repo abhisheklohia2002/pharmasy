@@ -141,10 +141,10 @@ continue with your order
   isOTP?(<Box>
 
     <Text className='text_login_drawer'>
-Enter your mobile number
+Enter your Email Address
 </Text>
 <Stack>
-<Input maxLength={10} className='drawer_input_login'  placeholder='+91 Your Mobile Number' size='md' />
+<Input type='email' className='drawer_input_login'  placeholder='Your Email Address' size='md' />
 
 <Button onClick={HandleOTP} colorScheme='teal' size='md' className='btn_drawer_login'>
 Send OTP

@@ -9,19 +9,25 @@ import {DrawerContent, Button,Drawer,DrawerBody,DrawerFooter,DrawerOverlay,Drawe
 import { useSelector } from 'react-redux'
 
 import GridCartpage from './components/StoreValue/GridCartpage'
+import AlertPopExample from './components/popup/PopAlertOne'
+import { useNavigate } from 'react-router-dom'
 function App() {
+  const [email,setemail] = useState("")
+  const nav = useNavigate()
 const items = useSelector((state)=>state.product.cart)
   const { isOpen, onOpen, onClose } = useDisclosure();
 const [isOTP,setOTP]  = useState(true)
 const {isOpen:isLogin,onOpen:isLoginOpen,onClose:isloginClose} = useDisclosure()
 const [otpValues, setOtpValues] = useState(['', '', '', '']);
-
+const [otpback,setotpback] = useState("")
 const handleOtpChange = (index, value) => {
   if (value.length <= 1) {
     const newOtpValues = [...otpValues];
     newOtpValues[index] = value;
     setOtpValues(newOtpValues);
   }
+
+  
 };
 
   const btnRef = React.useRef()
@@ -38,7 +44,70 @@ const handleOtpChange = (index, value) => {
   });
   
 
-const HandleOTP = ()=>{
+const VerifyFunction = (id)=>{
+
+  if(+otpValues.join('')==otpback  ){
+console.log(true)
+
+
+nav(`/profile/${id}`)
+  }
+  else {
+console.log("false")
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let e;
+
+const HandleOTP = async(e)=>{
+e.preventDefault();
+console.log(email)
+try {
+  const data = await fetch("http://localhost:8000/api/phone",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({email:email})
+  });
+
+const res = await data.json();
+console.log(res);
+
+if(res.OTP){
+  setotpback(res.msg)
+  // alert(res.msg)
+  setOTP(false)
+
+
+
+}
+else {
+  setOTP(true)
+
+}
+
+
+} catch (error) {
+  console.log(error)
+}
+
+
+
+
   setOTP(false)
 }
 
@@ -46,7 +115,7 @@ const HandleOTP = ()=>{
     <>
     <div>
    
-
+   {!isOTP ? <AlertPopExample  otp = {otpback}  msg = {"Please verify your email by entering below OTP"} OTP = "OTP" />:""}
       <Navbar btnRef = {btnRef} HandleClickCart = {onOpen} LoginDrawer = {LoginDrawer}
       isLoginOpen = {isLoginOpen}
       />
@@ -144,7 +213,7 @@ continue with your order
 Enter your Email Address
 </Text>
 <Stack>
-<Input type='email' className='drawer_input_login'  placeholder='Your Email Address' size='md' />
+<Input value={email} onChange={(e)=>setemail(e.target.value)} type='email' className='drawer_input_login'  placeholder='Your Email Address' size='md' />
 
 <Button onClick={HandleOTP} colorScheme='teal' size='md' className='btn_drawer_login'>
 Send OTP
@@ -173,7 +242,7 @@ Enter OTP Number
 
 </Box>
 <Box>
-  <Button colorScheme='teal' size='md' className='btn_drawer_login'>
+  <Button onClick={()=>VerifyFunction(email)} colorScheme='teal' size='md' className='btn_drawer_login'>
     Verify
   </Button>
 </Box>

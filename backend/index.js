@@ -2,9 +2,10 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const PORT = 8000 || process.env.PORT
+const cors = require("cors")
 const router = require('./Routes/AllRoutes')
 app.use(express.json());
-
+app.use(cors())
 
 mongoose.connect(`mongodb+srv://king:king@cluster0.addnvdz.mongodb.net/pharmeasy?retryWrites=true&w=majority`,{
     

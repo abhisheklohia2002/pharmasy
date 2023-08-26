@@ -58,7 +58,7 @@ const Post_ParmEasy = async(req,res)=>{
 
 const Phoneverify  = async(req,res)=>{
     const {email} = req.body;
-
+console.log(email)
     try {
 if(email !== ""){
 const check_phone  = await model_verify.findOne({email:email});

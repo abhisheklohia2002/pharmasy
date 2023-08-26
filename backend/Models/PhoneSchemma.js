@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 const phoneuser = new mongoose.Schema({
-    email :{
+    email:{
         type:String,
         required:true
     }

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box } from "@chakra-ui/react";
 import "./profile.css";
 import GridExample from "./FormGrid"
 import { useParams } from "react-router-dom";
 export default function Profile() {
     const {id} = useParams();
-    console.log(id)
+    console.log(id);
+
+    useEffect(()=>{
+
+    },[id])
   const arrow = ">";
   return (
     <>

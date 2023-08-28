@@ -120,6 +120,47 @@ res.send({msg:"please fill all entry"})
 }
 
 
+
+
+const GetEmail = async(req,res)=>{
+    try {
+        const data_email = await model_verify.find({});
+        console.log(data_email);
+        // res.send({msg:data_email,status:202})
+    } catch (error) {
+        console.log(error)
+        res.send({msg:404})
+    }
+}
+
+const UpdatePharm = async (req, res) => {
+    const { name, mobile_no,name1,mobile_no1 } = req.body;
+  
+    try {
+      if (name !== "" || mobile_no !== "") {
+       const data_info = await models_pharm.findOne({name:name,mobile_no:mobile_no});
+
+
+
+  
+        if (data_info) {
+         const id = data_info._id;
+         const data_update = await models_pharm.findByIdAndUpdate(id,{name:name1,mobile_no:mobile_no1});
+
+          res.status(200).json({ message: 'Document updated successfully', data_update ,status:true});
+        } else {
+          res.status(404).json({ message: 'Document not found' });
+        }
+      } else {
+        res.status(400).json({ message: 'Both name and mobile_no cannot be empty' });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  };
+  
+
 module.exports = {
-    Post_ParmEasy,Phoneverify
+    Post_ParmEasy,Phoneverify,GetEmail,UpdatePharm
 }

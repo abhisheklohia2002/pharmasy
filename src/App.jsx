@@ -116,13 +116,13 @@ else {
     <div>
    
    {!isOTP ? <AlertPopExample  otp = {otpback}  msg = {"Please verify your email by entering below OTP"} OTP = "OTP" />:""}
+   </div>
       <Navbar btnRef = {btnRef} HandleClickCart = {onOpen} LoginDrawer = {LoginDrawer}
       isLoginOpen = {isLoginOpen}
       />
      
      
       <ALLROUTES  btnRef = {btnRef} HandleClickCart = {onOpen} />
-    </div>
    
     <Drawer size="lg"
         isOpen={isOpen}

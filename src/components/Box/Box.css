@@ -16,5 +16,13 @@
     justify-content: space-around;
 }
 .Box_image_offer{
-    
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+.Box_shop_categories{
+margin-top: 3rem;
+}
+.shop_categories{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5rem;
 }

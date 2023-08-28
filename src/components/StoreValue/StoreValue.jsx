@@ -6,20 +6,20 @@ import CartProducts from './CartProducts'
 const options = ["Price Low to High", "Price High to Low", "Discount"];
 
 
-export default function StoreValue() {
+export default function StoreValue({btnRef,HandleClickCart}) {
   const arrow  = ">"
   const [refs,setrefs] = useState(0)
 const [products,setproducts] = useState([]);
 const [selectedOption, setSelectedOption] = useState("");
 
-// console.log(selectedOption)
+
 
 const FetchProducts = async()=>{
   if(refs==0){
     try {
       const getData = await fetch(`https://fakestoreapi.com/products`);
       const res = await getData.json();
-      // console.log(res)
+     
       setproducts([...res])
 setrefs((refs)=>refs+1)
 
@@ -40,9 +40,7 @@ for(var i = 0;i<products.length;i++){
 }
 setrefs((refs)=>refs+1)
 setproducts(products)
-// setSelectedOption("")
 
-// console.log(products)
     }
     else if("Price High to Low"==selectedOption){
       for(var i = 0;i<products.length;i++){
@@ -57,28 +55,12 @@ setproducts(products)
 
     setrefs((refs)=>refs+1)
     setproducts(products)
-    // setSelectedOption("")
+    
 
 
 
   }
-    // else {
-    //   // Math.floor(elem.price%20)*10
-    //   for(var i = 0;i<products.length;i++){
-    //     for(var j = 0; j<products.length-i-1; j++){
-    //       if(Math.floor(products[j].price%20)*10<Math.floor(products[j+1].price%20)*10){
-    //         var temp = products[j];
-    //         products[j]  = products[j+1];
-    //         products[j+1] = temp
-    //       }
-    //     }
-    // }
-
-    // setrefs((refs)=>refs+1)
-    // setproducts(products)
-    //   setSelectedOption("")
-
-    // }
+   
   }
 }
 
@@ -95,11 +77,8 @@ FetchProducts()
 
 
   return (
-<Box>
-<Box className='valueStore_heading'>
-  Home {arrow} All Categories {arrow} Values Store
+<Box backgroundColor={""}>
 
-</Box>
 
 
 <Box className='ValueStore_filter'>
@@ -121,12 +100,10 @@ FetchProducts()
 
 
 
-{/* base Filter and show */}
+
 
 <Box className='CartProducts_Box'>
-  <Box>
-    Filter
-  </Box>
+
 <SimpleGrid className='grid_simple' columns={3} spacing={6} textAlign={"Center"} >
   {
     products?.map((elem,index)=>(
@@ -150,3 +127,6 @@ FetchProducts()
 </Box>
   )
 }
+
+
+

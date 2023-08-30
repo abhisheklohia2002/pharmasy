@@ -5,14 +5,15 @@ const PORT = 8000 || process.env.PORT
 const cors = require("cors")
 const router = require('./Routes/AllRoutes')
 app.use(express.json());
-app.use(cors(
+app.use(cors())
+// app.use(cors(
 
-{
-    origin:["https://pharmasy-abhisheklohia2002.vercel.app"],
-    methods:["POST","GET","PUT","DELETE"],
-    credentials:true
-}
-))
+// {
+//     origin:["https://pharmasy-abhisheklohia2002.vercel.app"],
+//     methods:["POST","GET","PUT","DELETE"],
+//     credentials:true
+// }
+// ))
 
 mongoose.connect(`mongodb+srv://king:king@cluster0.addnvdz.mongodb.net/pharmeasy?retryWrites=true&w=majority`,{
     
@@ -26,8 +27,11 @@ mongoose.connect(`mongodb+srv://king:king@cluster0.addnvdz.mongodb.net/pharmeasy
     console.log(`Err========= at DB`,er)
 })
 
+app.use("/api",router)
+app.get("/",(req,res)=>{
+    res.send({msg:"Hello bro"})
+})
 const Start = async()=>{
-    app.use("/api",router)
 
     try {
 app.listen(PORT,()=>{

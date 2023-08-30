@@ -4,7 +4,8 @@
   "description": "project",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node app.js"
   },
   "author": "abhishek lohia",
   "license": "ISC",

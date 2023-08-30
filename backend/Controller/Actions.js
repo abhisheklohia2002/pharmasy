@@ -126,7 +126,7 @@ const GetEmail = async(req,res)=>{
     try {
         const data_email = await model_verify.find({});
         console.log(data_email);
-        // res.send({msg:data_email,status:202})
+        res.send({msg:data_email,status:202})
     } catch (error) {
         console.log(error)
         res.send({msg:404})

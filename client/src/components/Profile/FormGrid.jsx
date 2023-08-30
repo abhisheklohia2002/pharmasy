@@ -53,7 +53,7 @@ setinfo({...info,[name]:value})
 const HandlePost = async(e)=>{
     e.preventDefault();
     try {
-        const data = await fetch("http://localhost:8000/api/pharm",{
+        const data = await fetch("https://pharmasy.vercel.app/pharm",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -77,7 +77,7 @@ setdiactive(true)
 const HandleUpdate = async(e)=>{
   e.preventDefault()
   try {
-    const data = await fetch("http://localhost:8000/api/pharm",{
+    const data = await fetch("https://pharmasy.vercel.app/pharm",{
       method:"put",
       headers:{
           "Content-Type":"application/json",

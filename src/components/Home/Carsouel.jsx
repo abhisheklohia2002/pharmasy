@@ -49,14 +49,14 @@ export default function CaptionCarousel() {
       title: '',
       text: "",
       image:
-      "https://cdn01.pharmeasy.in/dam/banner/banner/8cb4ef485d3-New-360-Banner.jpg"
+      "https://cdn.pixabay.com/photo/2018/01/22/11/02/hospital-3098683_1280.jpg"
         // 'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
     },
     {
       title: '',
       text: "",
       image:
-      "https://cdn01.pharmeasy.in/dam/banner/banner/6177763516b-Zandu.jpg"
+      "https://cdn.pixabay.com/photo/2018/01/08/09/46/pill-3069032_1280.jpg"
         // 'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
     },
   ]

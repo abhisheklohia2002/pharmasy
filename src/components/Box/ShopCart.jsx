@@ -6,7 +6,7 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from '@chakra-ui/react';
-
+import "./Box.css"
 const ShopCart = () => {
  
     const shop_cart = [
@@ -54,7 +54,7 @@ const ShopCart = () => {
         // },
       ];
   return (
-    <Container maxW="container.lg">
+    <Container  maxW="container.lg">
       <Box overflowX="auto">
         <SimpleGrid
           columns={shop_cart.length}
@@ -63,8 +63,8 @@ const ShopCart = () => {
           px={2}
           alignItems="center">
           {shop_cart.map(item => (
-            <Box key={item.id}>
-              <chakra.img src={item.img} alt={item.title} maxH="100px" />
+            <Box className='img_king' key={item.id}>
+              <chakra.img  src={item.img} alt={item.title} maxH="100px" />
               <chakra.p mt={2}>{item.title}</chakra.p>
             </Box>
           ))}

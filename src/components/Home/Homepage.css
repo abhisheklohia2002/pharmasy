@@ -39,7 +39,7 @@ padding-top: 2rem;
     margin-right: 1rem;
 }
 .gradients{
-    background: rgb(255,255,255);
+    /* background: rgb(255,255,255); */
 background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(249, 249, 249) 100%);
 }
 .welcome_offer{
@@ -70,21 +70,24 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(249, 249, 249) 10
   .Offer_Homepage{
     margin-top: 3rem;
     padding-left: 5rem;
-    background-color: #F5F5F5;
+    /* background-color: #F5F5F5; */
   }
 
   .Offer_OfferBox{
     display: flex;
   }
 
-  .Shop_cart_products{
-    /* display: flex;
-    justify-content: space-around;
-    text-align: center;
-    place-items: center;
-    overflow-x: hidden;
-   width: 70%;
-   margin: auto; */
-   background-color: #F5F5F5;
-
+  .Shop_cart_products {
+    display: flex;
+justify-content: space-around;
+place-items: center;
+width: 80%;
+margin: auto;
+margin-top: 2rem;
   }
+  
+.Box_shop_categories{
+    
+}
+
+

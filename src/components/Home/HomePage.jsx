@@ -9,6 +9,7 @@ import CaptionCarousel from "./Carsouel";
 
 import LargeWithNewsletter from "../footer/Footer";
 import ShopCart from "../Box/ShopCart";
+import ProductBox from "./ProductList";
 
 export default function HomePage() {
   // const images = ["https://cdn01.pharmeasy.in/dam/banner/banner/cdd68240872-MainSaleBannerHP.jpg","	https://cdn01.pharmeasy.in/dam/banner/banner/8a627d07bfb-WELL25.jpg","https://cdn01.pharmeasy.in/dam/banner/banner/8729de110af-BOGO_iday.jpg","	https://cdn01.pharmeasy.in/dam/banner/banner/8729de110af-BOGO_iday.jpg","	https://cdn01.pharmeasy.in/dam/banner/banner/48fcda97da9-slippernew.jpg"]
@@ -19,47 +20,50 @@ export default function HomePage() {
 
   const shop_cart = [
     {
-      id: 1,
-      img: "https://cdn.pixabay.com/photo/2017/02/01/09/43/mattress-2029190_640.jpg",
-      title: "Mattresses",
+      id: 100,
+      img: "	https://cdn.pixabay.com/photo/2012/02/29/15/57/baby-19261_960_720.jpg",
+      title: "Baby Diaper",
+      price:"10.00"
     },
 
     {
-      id: 2,
-      img: "https://cdn.pixabay.com/photo/2016/03/27/22/01/person-1284444_640.jpg",
+      id: 200,
+      img: "https://immigrationimpact.com/wp-content/uploads/2023/01/immigration-impact-shortage-home-health-aides.jpg",
       title: "Personel Care",
+      price:"510.00"
+
     },
 
     {
-      id: 3,
-      img: "https://cdn.pixabay.com/photo/2020/11/07/20/29/injection-5722329_640.jpg",
-      title: "HealthCare Devices",
+      id: 300,
+      img: "https://cdn.pixabay.com/photo/2013/07/12/18/39/clinical-thermometer-153666_960_720.png",
+      title: "Theromter",
+      price:"30.00"
+
     },
     {
-      id: 4,
+      id: 400,
       img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
       title: "Top Products",
+      price:"80.00"
+
     },
     {
-      id: 5,
+      id: 500,
       img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
       title: "Top Products",
+      price:"90.00"
+
     },
     {
-      id: 6,
+      id: 600,
       img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
-      title: "Top Products",
+
+      title: "Oliver oil",
+      price:"60.00"
+
     },
-    {
-      id: 7,
-      img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
-      title: "Top Products",
-    },
-    {
-      id: 8,
-      img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
-      title: "Top Products",
-    },
+   
   ];
 
   return (
@@ -132,7 +136,7 @@ export default function HomePage() {
         <CaptionCarousel />
       </Box>
       <Box className="Offer_Homepage">
-        <Text backgroundColor={"#F5F5F5"} fontSize="3xl" fontFamily="heading" fontWeight={500}>
+        <Text backgroundColor={""} fontSize="3xl" fontFamily="heading" fontWeight={500}>
           Offers Just for You
         </Text>
         <Box className="Offer_OfferBox">
@@ -168,13 +172,29 @@ export default function HomePage() {
         </Box>
       </Box>
       <Box className="Box_shop_categories">
-        <Text backgroundColor={"#F5F5F5"} fontSize={"3xl"} fontWeight={600} className="shop_categories">
+        <Text backgroundColor={""} fontSize={"3xl"} fontWeight={600} className="shop_categories">
           Shop by Categories
         </Text>
         <Box className="Shop_cart_products">
          <ShopCart/>
         </Box>
       </Box>
+
+
+      <Box className="Box_shop_categories">
+        <Text backgroundColor={""} fontSize={"3xl"} fontWeight={600} className="shop_categories">
+        New Launches
+        </Text>
+        <Text fontSize={"sm"} pl={20} fontFamily={"sans-serif"}>
+        New wellness range just for you!
+        </Text>
+        <Box  className="Shop_cart_products">
+{
+  shop_cart.map((e,i)=><ProductBox key = {i}  imageUrl= {e.img} title = {e.title} price = {e.price} />)
+}
+        </Box>
+      </Box>
+
 
       <Box>
         {/* <footer></footer> */}

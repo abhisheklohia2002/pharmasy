@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux'
 import GridCartpage from './components/StoreValue/GridCartpage'
 import AlertPopExample from './components/popup/PopAlertOne'
 import { useNavigate } from 'react-router-dom'
+import PrivateRoute from './components/PrivateRoutes/PrivateRoute'
 function App() {
   const [email,setemail] = useState("")
   const nav = useNavigate()
@@ -134,6 +135,8 @@ else {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Cart Products</DrawerHeader>
+{/* <PrivateRoute> */}
+
 
           <DrawerBody>
 
@@ -144,6 +147,7 @@ uniqueItems.length > 0 ? (
   uniqueItems.map((elem, index) => (
     <span key={index}>
       <GridCartpage
+      key = {index}
         id={elem.id}
         price={elem.price}
         title={elem.title}
@@ -162,7 +166,7 @@ uniqueItems.length > 0 ? (
 
 }
           </DrawerBody>
-
+          {/* </PrivateRoute> */}
           <DrawerFooter>
             <Button variant='outline' mr={3} onClick={onClose}>
               Cancel

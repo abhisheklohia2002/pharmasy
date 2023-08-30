@@ -13,7 +13,7 @@ const select = useSelector((state)=>state.product.cart)
 const HandleDeleteCart  = (id)=>{
 const payload = {id};
 console.log("delete")
-Dispatch(RemoveData(payload))
+// Dispatch(RemoveData(payload))
 Dispatch(RemoveToCart(payload))
 // console.log(select,"car")
 }

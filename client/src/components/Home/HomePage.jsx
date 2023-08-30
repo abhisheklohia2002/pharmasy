@@ -71,9 +71,15 @@ export default function HomePage() {
     
       <Box className="HomePage_main_Box">
         <Box className="Homepage_main_box_second">
-          <Box>Medicine</Box>
-          <Box>Lab Tests</Box>
-          <Box>HealthCare</Box>
+          <Box
+          onClick={HandleJump}
+          >Medicine</Box>
+          <Box
+          onClick={HandleJump}
+          >Lab Tests</Box>
+          <Box
+          onClick={HandleJump}
+          >HealthCare</Box>
           <Box>PLUS</Box>
           <Box>Offers</Box>
           <Box onClick={HandleJump}>Value Store</Box>
@@ -190,7 +196,7 @@ export default function HomePage() {
         </Text>
         <Box  className="Shop_cart_products">
 {
-  shop_cart.map((e,i)=><ProductBox key = {i}  imageUrl= {e.img} title = {e.title} price = {e.price} />)
+  shop_cart.map((e,i)=><ProductBox key = {i} id = {e.id}  imageUrl= {e.img} title = {e.title} price = {e.price} />)
 }
         </Box>
       </Box>

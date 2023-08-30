@@ -3,9 +3,18 @@ import { Box } from "@chakra-ui/react";
 import "./profile.css";
 import GridExample from "./FormGrid"
 import { useParams } from "react-router-dom";
+import { AuthAdd, AuthRemove } from "../ReduxStore/authslice";
+import { useDispatch, useSelector } from "react-redux";
 export default function Profile() {
     const {id} = useParams();
-    console.log(id);
+    const dispatch = useDispatch();
+    const selector = useSelector((state)=>state.Auth)
+    console.log(selector);
+
+if(selector.length <1){
+
+  dispatch(AuthAdd())
+}
 
     useEffect(()=>{
 

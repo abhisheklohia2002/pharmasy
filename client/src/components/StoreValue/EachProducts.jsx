@@ -6,6 +6,8 @@ import SelectOption from "../Box/Selected_quantity";
 import ADDTOCART from "../button/ADDTOCART";
 import { useDispatch, useSelector } from "react-redux";
 import { AddToCart } from "../ReduxStore/ProductsSlice";
+import PrivateRoute from "../PrivateRoutes/PrivateRoute";
+
 // useState
 
 const options = [
@@ -33,6 +35,8 @@ dispatch(AddToCart(payload))
 // console.log(Selected,"view ")
 
   return (
+   
+
     <Grid key={id} templateColumns="1fr 2fr 2fr" gap={4} p={4}>
       <Box bg="gray.100" p={4} textAlign="center">
         <Image src={images} alt={title} />
@@ -77,9 +81,12 @@ dispatch(AddToCart(payload))
         <Text color={"gray.500"} textAlign={"left"} fontFamily={"sans-serif"} fontWeight={"semibold"} fontSize={"1xl"} paddingLeft={"2.2rem"}>
         Please add item(s) to proceed
         </Text>
+        {/* <PrivateRoute> */}
 <Text onClick={()=>AddToCarts(id,price*(Number(selectedOption)),title,images,selectedOption)} paddingTop={"1rem"}>
 <ADDTOCART title = {"Add To Cart"} width = "30rem" color="whatsapp"   />
 </Text>
+    {/* </PrivateRoute> */}
+
       </Box>
     </Grid>
   );

@@ -77,7 +77,7 @@ const HandleOTP = async(e)=>{
 e.preventDefault();
 console.log(email)
 try {
-  const data = await fetch("http://localhost:8000/api/phone",{
+  const data = await fetch("https://pharmasy.vercel.app/phone",{
     method:"POST",
     headers:{
       "Content-Type":"application/json"

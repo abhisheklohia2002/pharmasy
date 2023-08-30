@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Divider, Text, Image } from "@chakra-ui/react";
 import SearchBox from "../Search/SearchBox";
 import CartBox from "../Box/CartBox";
-import "./HomePage.css";
+import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import OfferBox from "../Box/OfferBox";
 import CaptionCarousel from "./Carsouel";
@@ -138,6 +138,7 @@ export default function HomePage() {
           Your Welcome Offer
         </Text>
       </Box>
+      
       <Box className="scrollbar">
         <CaptionCarousel />
       </Box>

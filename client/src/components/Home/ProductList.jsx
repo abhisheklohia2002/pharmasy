@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Image, Text, Button } from '@chakra-ui/react';
 // Import your external CSS file
-import "./HomePage.css"
+import "./Home.css"
 import { useDispatch } from 'react-redux';
 import { AddToCart } from '../ReduxStore/ProductsSlice';
 const ProductBox = ({id, imageUrl, title, price }) => {

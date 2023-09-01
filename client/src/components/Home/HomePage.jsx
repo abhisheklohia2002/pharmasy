@@ -43,21 +43,21 @@ export default function HomePage() {
     },
     {
       id: 400,
-      img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
-      title: "Top Products",
+      img: "https://cdn.pixabay.com/photo/2016/07/24/21/01/thermometer-1539191_960_720.jpg",
+      title: "Top Medicine",
       price:"80.00"
 
     },
     {
       id: 500,
-      img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
-      title: "Top Products",
+      img: "	https://cdn.pixabay.com/photo/2017/02/02/15/15/bottle-2032980_960_720.jpg",
+      title: "Water Bottles",
       price:"90.00"
 
     },
     {
       id: 600,
-      img: "https://cdn.pixabay.com/photo/2012/04/11/17/53/approved-29149_640.png",
+      img: "https://cdn.pixabay.com/photo/2015/10/02/15/59/olive-oil-968657_1280.jpg",
 
       title: "Oliver oil",
       price:"60.00"

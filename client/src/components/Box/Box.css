@@ -3,6 +3,10 @@
 }
 .cartbox{
     border-radius: 1rem;
+    background-color: antiquewhite;
+}
+.cartbox:hover{
+    background-color: aliceblue;
 }
 
 .Offer_Box_you{

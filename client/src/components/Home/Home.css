@@ -88,3 +88,10 @@ margin-top: 2rem;
   
 
 
+  .Box_productsList{
+    background-color: antiquewhite;
+  }
+  .Box_productsList:hover{
+    cursor: pointer;
+background-color: beige;
+  }

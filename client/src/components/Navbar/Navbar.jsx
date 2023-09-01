@@ -6,11 +6,13 @@ import {BiSolidOffer} from "react-icons/bi"
 import {BsCart} from "react-icons/bs"
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 export default function Navbar({btnRef,HandleClickCart,LoginDrawer,isLoginOpen}) {
 const nav = useNavigate()
 const HomeToLink = ()=>{
-nav("/")
+nav("/") 
 }
+const selector = useSelector((state)=>state.product.cart)
 const [user,setuser] = useState("")
 useEffect(() => {
   const url = window.location.href;
@@ -89,9 +91,11 @@ const getEmailFromUrl = (url) => {
      <Box ref={btnRef} onClick={HandleClickCart} className='after_box_'  >
        <Flex align="center">
            <Box pl={3}>
-             <BsCart size={22} />
+             <BsCart size={22}  />
            </Box>
-           <Button  >Cart</Button>
+           <Button
+           color={"InfoText"}
+           >Cart {selector.length} </Button>
          </Flex>
        </Box>
      </Box>
